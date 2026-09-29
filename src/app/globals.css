@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colour tokens */
+  --color-bg: #06070c;
+  --color-bg-soft: #0a0d16;
+  --color-bg-panel: #0d1120;
+  --color-line: rgba(231, 233, 242, 0.09);
+  --color-line-soft: rgba(231, 233, 242, 0.05);
+  --color-ink: #e9ebf3;
+  --color-ink-dim: #9599ad;
+  --color-ink-faint: #666b80;
+
+  --color-blue: #4c7cff;
+  --color-purple: #9b6bff;
+  --color-cyan: #37d6c8;
+
+  /* Type tokens */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-caret: caret 1s steps(1) infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes caret {
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible, on-brand keyboard focus ring for every interactive element */
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--color-purple);
+  color: #06070c;
+}
+
+/* Subtle ambient backdrop: a couple of soft gradient fields, not a full-bleed glow */
+.ambient-field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ambient-field::before,
+.ambient-field::after {
+  content: "";
+  position: absolute;
+  width: 46rem;
+  height: 46rem;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.16;
+}
+.ambient-field::before {
+  top: -14rem;
+  right: -10rem;
+  background: radial-gradient(circle, var(--color-blue), transparent 70%);
+}
+.ambient-field::after {
+  bottom: -16rem;
+  left: -12rem;
+  background: radial-gradient(circle, var(--color-purple), transparent 70%);
+  opacity: 0.12;
+}
+
+.text-gradient {
+  background-image: linear-gradient(100deg, var(--color-blue), var(--color-purple) 55%, var(--color-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(231, 233, 242, 0.045), rgba(231, 233, 242, 0.015));
+  border: 1px solid var(--color-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Custom scrollbar for horizontally-scrolling tech-badge rows, kept subtle */
+.thin-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 9999px;
+}
