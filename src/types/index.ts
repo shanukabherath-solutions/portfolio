@@ -72,3 +72,31 @@ export type ServiceItem = {
   title: string;
   description: string;
 };
+
+export type AesaFeatureGroup = {
+  group: string;
+  items: string[];
+};
+
+export type PipelineStage = {
+  label: string;
+  detail: string;
+  tools?: string[];
+};
+
+export type AesaProject = {
+  title: string;
+  fullName: string;
+  categories: string[];
+  summary: string;
+  description: string;
+  featureGroups: AesaFeatureGroup[];
+  technologies: string[];
+  pipeline: PipelineStage[];
+  links: {
+    github: LinkRef;
+    documentation: LinkRef;
+    /** Optional. Leave href empty ("") to hide the button until screenshots exist. */
+    screenshots: LinkRef;
+  };
+};

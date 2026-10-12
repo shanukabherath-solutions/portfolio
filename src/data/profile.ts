@@ -2,6 +2,7 @@ import type {
   CertificationItem,
   EducationItem,
   ExperienceItem,
+  AesaProject,
   FeaturedProject,
   ServiceItem,
   SkillGroup,
@@ -53,9 +54,9 @@ export const siteConfig = {
 export const about = {
   heading: "About",
   paragraphs: [
-    "I'm a final-year BSc (Hons) Computer Science undergraduate at the University of Bedfordshire, working towards a career in software development. I'm currently focused on web development, AI-integrated applications, cybersecurity fundamentals, and UI/UX.",
-    "Before university, I completed an HND in IT, and I previously worked as a graphic designer, which shapes how I approach interfaces — I try to make sure things I build are functional first and presented well second.",
-    "Most of my time outside coursework goes into building small, complete projects rather than tutorials: a full-stack AI photo editor, a couple of cybersecurity tools, and ongoing practice with REST APIs and authentication systems.",
+    "I'm a final-year BSc (Hons) Computer Science undergraduate at the University of Bedfordshire, focused on building practical software solutions across web development, artificial intelligence, and cybersecurity.",
+    "My projects include Photosphere, an AI-powered photo editing web application with Sinhala language support, and AESA, an AI-assisted security-focused engineering agent designed to inspect repositories, propose code changes, and apply automated security and code-quality checks.",
+    "With a background in graphic design and hands-on experience with full-stack development, APIs, Docker, and security tooling, I aim to build software that is functional, secure, and thoughtfully designed.",
   ],
   interests: [
     "Software Development",
@@ -64,51 +65,70 @@ export const about = {
     "Cybersecurity",
     "UI/UX",
     "API Development",
+    "DevSecOps",
   ],
 };
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: "Programming & Development",
-    blurb: "Core languages I write and debug regularly.",
-    items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS"],
+    category: "Programming & Backend",
+    blurb: "Core languages and backend work I use in my projects.",
+    items: ["Python", "FastAPI", "REST APIs", "Swagger / OpenAPI"],
   },
   {
-    category: "Web Development",
-    blurb: "Frameworks and patterns used across my projects.",
-    items: ["React", "Next.js", "FastAPI", "REST APIs"],
+    category: "Frontend",
+    blurb: "Interfaces for the web apps I build.",
+    items: ["React", "Next.js", "JavaScript", "TypeScript", "HTML and CSS"],
   },
   {
-    category: "AI & Machine Learning",
+    category: "AI & AI-Assisted Development",
     blurb: "Integrating AI services into working applications.",
     items: [
-      "Gemini API",
+      "Gemini API integration",
+      "AI-powered application development",
+      "AI agent workflow design",
       "AI prompt processing",
       "Speech-to-text integration",
       "Image processing",
-      "AI-assisted applications",
     ],
   },
   {
-    category: "Databases",
-    blurb: "Where application data lives.",
-    items: ["MongoDB", "MongoDB Atlas"],
-  },
-  {
-    category: "Cybersecurity",
-    blurb: "Fundamentals I apply and continue to study.",
+    category: "Cybersecurity & DevSecOps",
+    blurb: "Fundamentals and security tooling I'm applying in projects and still learning.",
     items: [
       "Web security fundamentals",
       "Authentication",
       "Password hashing",
       "Encryption",
       "Burp Suite",
+      "Bandit",
+      "Gitleaks",
+      "Trivy",
+      "Secure coding practices",
+      "Automated security testing",
+      "Human approval workflows",
+      "Security gates",
     ],
   },
   {
-    category: "Tools",
-    blurb: "Day-to-day workflow.",
-    items: ["Git", "GitHub", "VS Code", "Swagger / OpenAPI"],
+    category: "Databases",
+    blurb: "Where application data lives.",
+    items: ["MongoDB", "MongoDB Atlas", "SQLite"],
+  },
+  {
+    category: "DevOps & Tools",
+    blurb: "Practical project experience; still building depth.",
+    items: [
+      "Docker",
+      "Docker Compose",
+      "Git",
+      "GitHub",
+      "CI/CD concepts",
+      "pytest",
+      "Ruff",
+      "mypy",
+      "VS Code",
+    ],
   },
 ];
 
@@ -231,6 +251,78 @@ export const featuredProject: FeaturedProject = {
       ],
     },
   ],
+};
+
+export const aesaProject: AesaProject = {
+  title: "AESA",
+  fullName: "AI Execution Security Agent",
+  categories: ["AI Agents", "Cybersecurity", "DevSecOps"],
+  summary:
+    "An AI-assisted engineering agent designed to inspect software repositories, propose code changes, and validate them through isolated execution, automated security checks, and human approval.",
+  description:
+    "AESA is a security-focused AI agent project that combines repository analysis, controlled code execution, and human oversight in a structured software engineering workflow. It uses a Docker-based sandbox to execute permitted commands and integrates automated code-quality and security tools to help identify issues before code changes are accepted.",
+  featureGroups: [
+    {
+      group: "Controlled execution",
+      items: [
+        "Restricted command execution through an allowlisted command system",
+        "Docker sandbox isolation for controlled testing",
+        "Git feature branches for proposed modifications",
+      ],
+    },
+    {
+      group: "Quality and security checks",
+      items: [
+        "Code-quality checks using Ruff, mypy, and pytest",
+        "Security scanning with Bandit, Gitleaks, and Trivy",
+        "Security gates that can block progression when checks fail",
+      ],
+    },
+    {
+      group: "Oversight and workflow",
+      items: [
+        "Repository analysis and task-driven code-change proposals",
+        "Human approval workflow before accepting proposed changes",
+      ],
+    },
+    {
+      group: "Interface and delivery",
+      items: [
+        "Backend API and frontend dashboard for managing tasks and reviewing results",
+        "Dry-run deployment configuration (no production deployment is claimed)",
+      ],
+    },
+  ],
+  technologies: [
+    "Python",
+    "FastAPI",
+    "React",
+    "Docker",
+    "SQLite",
+    "Git",
+    "pytest",
+    "Ruff",
+    "mypy",
+    "Bandit",
+    "Gitleaks",
+    "Trivy",
+  ],
+  // Simplified, illustrative workflow shown as a CSS diagram (not a screenshot).
+  // Check the order and wording against how AESA actually runs and adjust if needed.
+  pipeline: [
+    { label: "Repository analysis", detail: "Inspect the repository for a given task" },
+    { label: "Proposed change", detail: "Changes proposed on a Git feature branch", tools: ["Git"] },
+    { label: "Docker sandbox", detail: "Allowlisted commands run in isolation", tools: ["Docker"] },
+    { label: "Quality checks", detail: "Lint, type and test checks", tools: ["Ruff", "mypy", "pytest"] },
+    { label: "Security scans", detail: "Code, secrets and dependency/image scanning", tools: ["Bandit", "Gitleaks", "Trivy"] },
+    { label: "Human approval", detail: "A person reviews before changes are accepted" },
+  ],
+  links: {
+    github: { label: "View on GitHub", href: "YOUR_AESA_GITHUB_URL", isPlaceholder: true },
+    documentation: { label: "View Documentation", href: "YOUR_AESA_DOCS_URL", isPlaceholder: true },
+    // Optional: set to a real gallery/screenshots URL to show a "View Screenshots" button.
+    screenshots: { label: "View Screenshots", href: "" },
+  },
 };
 
 export const smallProjects: SmallProject[] = [

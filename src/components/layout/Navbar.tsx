@@ -40,7 +40,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled ? "glass" : "border-b border-transparent bg-transparent",
+        scrolled ? "glass-solid" : "border-b border-transparent bg-transparent",
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
@@ -103,7 +103,7 @@ export function Navbar() {
       {open ? (
         <div
           id="mobile-nav"
-          className="glass mx-4 mb-4 rounded-2xl px-6 py-6 md:hidden"
+          className="glass-solid mx-4 mb-4 rounded-2xl px-6 py-6 md:hidden"
         >
           <nav aria-label="Mobile" className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (

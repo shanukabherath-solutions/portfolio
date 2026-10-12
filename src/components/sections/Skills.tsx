@@ -7,12 +7,12 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { skillGroups } from "@/data/profile";
 
 const CATEGORY_ICONS: Record<string, ComponentType<{ size?: number; className?: string }>> = {
-  "Programming & Development": Code2,
-  "Web Development": Globe,
-  "AI & Machine Learning": BrainCircuit,
+  "Programming & Backend": Code2,
+  Frontend: Globe,
+  "AI & AI-Assisted Development": BrainCircuit,
+  "Cybersecurity & DevSecOps": ShieldCheck,
   Databases: Database,
-  Cybersecurity: ShieldCheck,
-  Tools: Wrench,
+  "DevOps & Tools": Wrench,
 };
 
 export function Skills() {

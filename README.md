@@ -15,6 +15,8 @@ Everything lives in **`src/data/profile.ts`**. Search the project for `YOUR_` to
 | `YOUR_CV_URL` | `siteConfig.cvUrl` | e.g. `/cv.pdf` (put the file in `public/`) |
 | `YOUR_SITE_URL` | `siteConfig.siteUrl` | Final domain, e.g. `https://shanuka.dev` (enables canonical URL, sitemap, Open Graph) |
 | `YOUR_PHOTOSPHERE_GITHUB_URL` / `_DEMO_URL` / `_VIDEO_URL` | `featuredProject.links` | Project links |
+| `YOUR_AESA_GITHUB_URL` / `YOUR_AESA_DOCS_URL` | `aesaProject.links` | AESA repository and README/documentation URLs |
+| `aesaProject.links.screenshots.href` | `aesaProject.links` | Optional. Leave `""` to hide the "View Screenshots" button until you have real screenshots |
 | `YOUR_*_GITHUB_URL` | `smallProjects[].githubUrl` | One per cybersecurity project |
 
 Placeholder links are automatically rendered as disabled (never as dead links), so the site is safe to preview before everything is filled in. Once you replace them, buttons become live.
@@ -23,6 +25,7 @@ Things to review before publishing:
 
 - **Certifications** are all marked "In Progress". Change `status` to `"Completed"` only for ones you have actually finished.
 - **Sinhala prompt examples** (`featuredProject.promptExamples`) are illustrative. Have a Sinhala speaker check them, or swap in prompts you've tested in Photosphere.
+- **AESA workflow diagram** (`aesaProject.pipeline`) is a simplified illustration, not a screenshot. Check the stage order and wording against how AESA actually runs.
 - **Case study** text describes the project as you outlined it; adjust anything that differs from what you actually built.
 - The Photosphere image is an illustrative UI mockup (`PhotosphereMockup.tsx`). To use real screenshots, add them under `public/` and render them with `next/image`.
 - Add an Open Graph image at `public/og.png` (1200x630) and reference it in `src/app/layout.tsx` (`openGraph.images`, `twitter.images`).

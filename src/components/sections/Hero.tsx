@@ -51,6 +51,11 @@ function ProfilePanel() {
           <span className="text-cyan">&quot;Security&quot;</span>
           <span className="text-ink-faint">],</span>
           {"\n  "}
+          <span className="text-blue">&quot;specialisation&quot;</span>
+          <span className="text-ink-faint">: </span>
+          <span className="text-cyan">&quot;AI Engineering &amp; DevSecOps&quot;</span>
+          <span className="text-ink-faint">,</span>
+          {"\n  "}
           <span className="text-blue">&quot;status&quot;</span>
           <span className="text-ink-faint">: </span>
           <span className="text-purple">&quot;open_to_work&quot;</span>

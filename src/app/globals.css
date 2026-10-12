@@ -121,6 +121,14 @@ body {
   -webkit-backdrop-filter: blur(14px);
 }
 
+/* More opaque variant for the sticky navbar and mobile menu so text behind never competes */
+.glass-solid {
+  background: rgba(8, 10, 18, 0.9);
+  border: 1px solid var(--color-line);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
 /* Custom scrollbar for horizontally-scrolling tech-badge rows, kept subtle */
 .thin-scroll::-webkit-scrollbar {
   height: 6px;

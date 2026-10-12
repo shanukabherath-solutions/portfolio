@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { FeaturedProject } from "./FeaturedProject";
+import { AesaProjectCard } from "./AesaProjectCard";
 import { ProjectsGrid } from "./ProjectsGrid";
 
 export function Projects() {
@@ -11,12 +12,16 @@ export function Projects() {
           <SectionHeading
             path="~/projects"
             title="Projects"
-            description="One larger build I've put the most time into, and a few smaller cybersecurity exercises."
+            description="Two larger builds, an AI photo editor and an AI-assisted security agent, plus a few smaller cybersecurity exercises."
           />
         </RevealOnScroll>
 
         <div className="mt-10">
           <FeaturedProject />
+        </div>
+
+        <div className="mt-8">
+          <AesaProjectCard />
         </div>
 
         <ProjectsGrid />
