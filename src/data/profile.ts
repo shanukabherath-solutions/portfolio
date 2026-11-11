@@ -360,7 +360,7 @@ export const smallProjects: SmallProject[] = [
 export const experience: ExperienceItem[] = [
   {
     role: "Graphic Designer",
-    organisation: "D Studio Multimedia Studio",
+    organisation: "Multimedia Studio",
     period: "April 2023 \u2013 October 2023",
     summary:
       "Worked on visual design and image editing for client projects, before moving into software development.",
@@ -382,7 +382,7 @@ export const education: EducationItem[] = [
   {
     qualification: "BSc (Hons) Computer Science",
     institution: "University of Bedfordshire",
-    status: "In Progress \u2014 Final Year",
+    status: "Completed",
   },
   {
     qualification: "HND in IT",
