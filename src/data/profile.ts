@@ -54,7 +54,7 @@ export const siteConfig = {
 export const about = {
   heading: "About",
   paragraphs: [
-    "I'm a final-year BSc (Hons) Computer Science undergraduate at the University of Bedfordshire, focused on building practical software solutions across web development, artificial intelligence, and cybersecurity.",
+    "I'm a final-year BSc (Hons) Computer Science graduate (Second Class Upper Division) at the University of Bedfordshire, focused on building practical software solutions across web development, artificial intelligence, and cybersecurity.",
     "My projects include Photosphere, an AI-powered photo editing web application with Sinhala language support, and AESA, an AI-assisted security-focused engineering agent designed to inspect repositories, propose code changes, and apply automated security and code-quality checks.",
     "With a background in graphic design and hands-on experience with full-stack development, APIs, Docker, and security tooling, I aim to build software that is functional, secure, and thoughtfully designed.",
   ],
