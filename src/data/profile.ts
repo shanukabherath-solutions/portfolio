@@ -23,8 +23,8 @@ export const siteConfig = {
   name: "Shanuka B. Herath",
   shortName: "Shanuka Herath",
   initials: "SH",
-  role: "Computer Science Undergraduate | Software & AI Developer",
-  seoTitle: "Shanuka B. Herath | Computer Science Undergraduate & Software Developer",
+  role: "Computer Science Graduate | Software & AI Developer",
+  seoTitle: "Shanuka B. Herath | Computer Science Graduate & Software Developer",
   location: "Sri Lanka",
   email: "shanbhera@gmail.com",
   // Used for canonical URLs, sitemap.xml and Open Graph tags once the site has a domain.
@@ -39,7 +39,7 @@ export const siteConfig = {
   heroSubhead:
     "I build modern web applications, AI-powered tools, and practical software solutions with a focus on usability, performance, and clean design.",
   metaDescription:
-    "Portfolio of Shanuka B. Herath, a Computer Science undergraduate focused on software development, AI-powered applications, web development, and cybersecurity.",
+    "Portfolio of Shanuka B. Herath, a Computer Science Graduate focused on software development, AI-powered applications, web development, and cybersecurity.",
   keywords: [
     "Software Developer Sri Lanka",
     "AI Developer",
@@ -54,7 +54,7 @@ export const siteConfig = {
 export const about = {
   heading: "About",
   paragraphs: [
-    "I'm a final-year BSc (Hons) Computer Science graduate (Second Class Upper Division) at the University of Bedfordshire, focused on building practical software solutions across web development, artificial intelligence, and cybersecurity.",
+    "I'm a final-year BSc (Hons) Computer Science Graduate (Second Class Upper Division) at the University of Bedfordshire, focused on building practical software solutions across web development, artificial intelligence, and cybersecurity.",
     "My projects include Photosphere, an AI-powered photo editing web application with Sinhala language support, and AESA, an AI-assisted security-focused engineering agent designed to inspect repositories, propose code changes, and apply automated security and code-quality checks.",
     "With a background in graphic design and hands-on experience with full-stack development, APIs, Docker, and security tooling, I aim to build software that is functional, secure, and thoughtfully designed.",
   ],
